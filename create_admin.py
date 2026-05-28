@@ -1,14 +1,21 @@
 import os
+import sys
 import django
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'medantaclone.settings')
+os.environ.setdefault('SECRET_KEY', 'sudharshan-heart-clinic-secret-2024-xyz')
+os.environ.setdefault('ALLOWED_HOSTS', '*')
+os.environ.setdefault('DEBUG', 'False')
+
 django.setup()
 
-from django.contrib.auth import get_user_model
-User = get_user_model()
+from django.contrib.auth.models import User
 
-if not User.objects.filter(username='admin').exists():
-    User.objects.create_superuser('admin', 'admin@sudharshanheartclinic.com', 'Admin@1234')
-    print("Admin user created!")
-else:
-    print("Admin already exists.")
+# Delete any existing admin and recreate fresh
+User.objects.filter(username='admin').delete()
+User.objects.create_superuser(
+    username='admin',
+    email='admin@gmail.com',
+    password='Admin@1234'
+)
+print("✅ Admin created: username=admin password=Admin@1234")
