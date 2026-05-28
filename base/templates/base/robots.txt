@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
 Disallow: /admin/
-Disallow: /admin-panel/
-
 Sitemap: https://drgauravmohan.com/sitemap.xml
