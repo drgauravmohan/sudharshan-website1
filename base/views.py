@@ -56,8 +56,8 @@ def home_care(request):
 def international_patient(request):
     return render(request, 'base/international-patient.html')
 
-def sudharshan heart clinic_labs(request):
-    return render(request, 'base/sudharshan heart clinic-labs.html')
+def shc_labs(request):
+    return render(request, 'base/medanta-labs.html')
 
 def our_pharmacy(request):
     return render(request, 'base/our-pharmacy.html')

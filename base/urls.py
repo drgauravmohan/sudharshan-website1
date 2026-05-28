@@ -24,7 +24,7 @@ urlpatterns = [
 
     path('international-patient/', views.international_patient, name='international-patient'),
 
-    path('sudharshan heart clinic-labs/', views.sudharshan heart clinic_labs, name='sudharshan heart clinic-labs'),
+    path('shc-labs/', views.shc_labs, name='shc-labs'),
 
     path('our-pharmacy/', views.our_pharmacy, name='our-pharmacy'),
 
