@@ -3,7 +3,10 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from django.views.generic import TemplateView
 urlpatterns = [
+    path('sitemap.xml', TemplateView.as_view(template_name='base/sitemap.xml', content_type='application/xml')),
+    path('robots.txt', TemplateView.as_view(template_name='base/robots.txt', content_type='text/plain')),
     path('admin/', admin.site.urls),
     path('', include('base.urls')),
 ]
