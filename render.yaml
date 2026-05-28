@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: sudharshan-heart-clinic
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn medantaclone.wsgi:application"
+    envVars:
+      - key: SECRET_KEY
+        value: sudharshan-heart-clinic-secret-key-2024-xyz
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: "*"
+      - key: PYTHON_VERSION
+        value: 3.12.0
