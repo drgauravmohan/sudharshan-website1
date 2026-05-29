@@ -1,11 +1,20 @@
 {% load static %}
+<style>
+@media (max-width: 767px) {
+  .logo a span { font-size: 14px !important; }
+  .logo a span small { font-size: 9px !important; }
+  .logo a img { height: 40px !important; width: 40px !important; }
+  .logo { max-width: 200px; overflow: hidden; }
+}
+</style>
+
 <!-- Header Section -->
 <header class="site-header">
     <div class="container dflex space-between centered-items">
         <div class="logo">
-          <a href="/" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-            <img src="{% static 'base/images/logo.png' %}" alt="Dr. Gaurav Mohan - Sudharshan Heart Clinic" style="height:50px;width:auto;" onerror="this.style.display='none'">
-            <span style="font-size:20px;font-weight:700;color:#1a1a1a;line-height:1.2;">Dr. Gaurav Mohan<br><small style="font-size:11px;font-weight:400;color:#666;">Sudharshan Heart Clinic</small></span>
+          <a href="/" style="display:flex;align-items:center;gap:8px;text-decoration:none;">
+            <img src="{% static 'base/images/logo.png' %}" alt="Dr. Gaurav Mohan Sudharshan Heart Clinic" style="height:55px;width:55px;object-fit:contain;border-radius:50%;">
+            <span style="font-size:18px;font-weight:700;color:#1a1a1a;line-height:1.2;white-space:nowrap;">Dr. Gaurav Mohan<br><small style="font-size:10px;font-weight:400;color:#888;white-space:nowrap;">Sudharshan Heart Clinic</small></span>
           </a>
       </div>
       <div wire:id="ZmZpLKCmekEgezlc10Dq" wire:initial-data="{&quot;fingerprint&quot;:{&quot;id&quot;:&quot;ZmZpLKCmekEgezlc10Dq&quot;,&quot;name&quot;:&quot;header&quot;,&quot;locale&quot;:&quot;en&quot;,&quot;path&quot;:&quot;\/&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;v&quot;:&quot;acj&quot;},&quot;effects&quot;:{&quot;listeners&quot;:[]},&quot;serverMemo&quot;:{&quot;children&quot;:[],&quot;errors&quot;:[],&quot;htmlHash&quot;:&quot;8788e961&quot;,&quot;data&quot;:{&quot;hospitals&quot;:[],&quot;mediclinics&quot;:null,&quot;specialities&quot;:[],&quot;stackholderTabs&quot;:null},&quot;dataMeta&quot;:{&quot;modelCollections&quot;:{&quot;hospitals&quot;:{&quot;class&quot;:&quot;App\\Models\\Clinic&quot;,&quot;id&quot;:[1,2,3,4,12],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:null},&quot;specialities&quot;:{&quot;class&quot;:&quot;App\\Models\\Speciality&quot;,&quot;id&quot;:[110,112,137,138,9,111],&quot;relations&quot;:[],&quot;connection&quot;:&quot;mysql&quot;,&quot;collectionClass&quot;:&quot;Kalnoy\\Nestedset\\Collection&quot;}}},&quot;checksum&quot;:&quot;b3ae940942a2f4b6812cc18ed09b12b25ddbb7043a8ea881030dd6e34bca2679&quot;}}">
@@ -30,7 +39,7 @@
     <nav>
         <ul class="menu">
             <li class="has-submenu">
-                <a href="#" class="open-submenu">Our Clinic</a>
+                <a href="/contact-us" class="open-submenu">Our Clinic</a>
                 <button type="button" class="open-dropdown">
                     <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="https://www.w3.org/2000/svg">
                         <path d="M11 1L6 6L1 1" stroke="#58595B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -47,7 +56,7 @@
             </ul>
         </li>
         <li class="has-submenu">
-            <a href="#" class="open-submenu">Services</a>
+            <a href="/contact-us" class="open-submenu">Services</a>
             <button type="button" class="open-dropdown" aria-label="Open submenu">
                 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="https://www.w3.org/2000/svg">
                     <path d="M11 1L6 6L1 1" stroke="#58595B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -67,7 +76,7 @@
             </ul>
         </li>
         <li class="has-submenu">
-            <a href="#" class="open-submenu">Health Library</a>
+            <a href="/contact-us" class="open-submenu">Health Library</a>
             <button type="button" class="open-dropdown" aria-label="Open submenu">
                 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="https://www.w3.org/2000/svg">
                     <path d="M11 1L6 6L1 1" stroke="#58595B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -79,7 +88,7 @@
         </li>
        
         <li class="has-submenu">
-            <a href="#" class="open-submenu">International Patients</a>
+            <a href="/contact-us" class="open-submenu">International Patients</a>
             <button type="button" class="open-dropdown" aria-label="Open submenu">
                 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="https://www.w3.org/2000/svg">
                     <path d="M11 1L6 6L1 1" stroke="#58595B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -93,7 +102,7 @@
 
         
         <li class="has-submenu">
-            <a href="#" class="open-submenu">Contact Us</a>
+            <a href="/contact-us" class="open-submenu">Contact Us</a>
             <button type="button" class="open-dropdown" aria-label="Open submenu">
                 <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="https://www.w3.org/2000/svg">
                     <path d="M11 1L6 6L1 1" stroke="#58595B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
